@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JSqo's HTML formatter</title>
+
+	<link rel="stylesheet" href="main.css">
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7VFZKZLYZ7"></script>
+	<script>
+		if (document.location.hostname.search("jsqo.github.io") !== -1) {
+			window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-7VFZKZLYZ7');
+		} else {
+			console.log("No analytics code ran.");
+		}
+	</script>
+
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<header>
+		<h2>JSqo's HTML formatter</h2>
+	</header>
+	<main>
+		<div class="input">
+			<div class="heading">
+				<h2>Enter HTML here:</h2>
+			</div>
+			<div class="input-box">
+				<textarea name="inputHTML" oninput="formatHTML(true)"></textarea>
+			</div>
+			<div class="form">
+				<form>
+					<button type="button" onclick="formatHTML()">Minify</button>
+					<button type="button" onclick="formatHTML(true)">Prettify</button>
+				</form>
+			</div>
+		</div>
+		<div class="output">
+			<div class="heading">
+				<h2>Indented HTML:</h2>
+			</div>
+			<div class="output-box">
+				<textarea name="outputHTML"></textarea>
+			</div>
+			<div class="form">
+				<form>
+					<button type="button" onclick="copyToClipboard()">Copy to clipboard</button>
+				</form>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<h4>&copy; Copyright 2020, Ankur Seth.</h4>
+	</footer>
+</body>
+</html>
